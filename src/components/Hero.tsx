@@ -21,7 +21,6 @@ export default function Hero() {
       "js/custom.js",
     ];
 
-
     scripts.forEach((src) => {
       const script = document.createElement("script");
       script.src = src;
@@ -29,7 +28,6 @@ export default function Hero() {
       document.body.appendChild(script);
     });
 
-    
     return () => {
       scripts.forEach((src) => {
         const script = document.querySelector(`script[src="${src}"]`);
@@ -72,7 +70,11 @@ export default function Hero() {
               </div>
             </div>
             <div className="col-md-6 p-100px-t p-50px-b md-p-10px-t">
-              <img className="hero-mock" src="img/hero-mock.png" alt="Hero mockup" />
+              <img
+                className="hero-mock"
+                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Ficonscout.com%2F3d-illustration%2Fcollaboration-10439389&psig=AOvVaw0_4ETvqk-lYkeFVBJEgGtd&ust=1728794701084000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCOin4aGEiIkDFQAAAAAdAAAAABAE"
+                alt="Hero mockup"
+              />
             </div>
           </div>
         </div>
