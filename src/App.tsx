@@ -58,9 +58,9 @@ export default function App() {
       <section>
         <main>
           <body data-spy="scroll" data-target="#navbarCodeply" data-offset="70">
-            <div className="loader-wrapper">
+            {/* <div className="loader-wrapper">
               <div className="loader"></div>
-            </div>
+            </div> */}
 
             <Header />
             <Hero />
