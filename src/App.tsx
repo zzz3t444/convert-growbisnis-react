@@ -17,7 +17,7 @@ import DummyTestimonial from "./components/DummyTestimonial";
 import InformationScreenshot from "./components/InformationScreenshot";
 import PricingList from "./components/PricingList";
 import Feature1 from "./components/Feature1";
-import Feature2 from "./components/Feature2";
+// import Feature2 from "./components/Feature2";
 import LatestBlog from "./components/LatestBlog";
 import FormContact from "./components/FormContact";
 import Footer from "./components/Footer";
@@ -72,7 +72,7 @@ export default function App() {
             <InformationScreenshot />
             <PricingList />
             <Feature1 />
-            <Feature2 />
+            {/* <Feature2 /> */}
             <LatestBlog />
             <FormContact />
             <Footer />
