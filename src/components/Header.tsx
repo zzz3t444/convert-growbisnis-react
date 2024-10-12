@@ -9,7 +9,6 @@ import "../../css/typography/poppins-quciksland.css";
 
 export default function Header() {
   useEffect(() => {
-  
     const scripts = [
       "js/jquery-3.2.1.min.js",
       "js/jquery-migrate-3.0.0.min.js",
@@ -22,7 +21,6 @@ export default function Header() {
       "js/custom.js",
     ];
 
-   
     scripts.forEach((src) => {
       const script = document.createElement("script");
       script.src = src;
@@ -30,7 +28,6 @@ export default function Header() {
       document.body.appendChild(script);
     });
 
-    
     return () => {
       scripts.forEach((src) => {
         const script = document.querySelector(`script[src="${src}"]`);
@@ -46,9 +43,7 @@ export default function Header() {
       <header id="home">
         <nav className="navbar navbar-inverse navbar-expand-lg header-nav fixed-top light-header">
           <div className="container">
-            <a className="navbar-brand" href="index.html">
-              {/* <img src="img/logo.png" alt="" /> */}
-            </a>
+            <a className="navbar-brand" href="index.html"></a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCodeply">
               <i className="icofont-navigation-menu"></i>
             </button>

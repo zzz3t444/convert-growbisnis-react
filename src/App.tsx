@@ -7,7 +7,7 @@ import "../css/style.css";
 import "../css/gredients/purple.css";
 import "../css/typography/poppins-quciksland.css";
 
-import Header from "./components/Header";
+// import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Preface from "./components/Preface";
@@ -17,7 +17,7 @@ import DummyTestimonial from "./components/DummyTestimonial";
 import InformationScreenshot from "./components/InformationScreenshot";
 import PricingList from "./components/PricingList";
 import Feature1 from "./components/Feature1";
-// import Feature2 from "./components/Feature2";
+import Feature2 from "./components/Feature2";
 import LatestBlog from "./components/LatestBlog";
 import FormContact from "./components/FormContact";
 import Footer from "./components/Footer";
@@ -25,15 +25,15 @@ import Footer from "./components/Footer";
 export default function App() {
   useEffect(() => {
     const scripts = [
-      "js/jquery-3.2.1.min.js",
-      "js/jquery-migrate-3.0.0.min.js",
-      "js/bootstrap.min.js",
-      "js/jquery.textillate.js",
-      "js/jquery.lettering.js",
-      "js/jquery.fittext.js",
-      "js/jquery.ajaxchimp.min.js",
-      "js/swiper.min.js",
-      "js/custom.js",
+      "../js/jquery-3.2.1.min.js",
+      "../js/jquery-migrate-3.0.0.min.js",
+      "../js/bootstrap.min.js",
+      "../js/jquery.textillate.js",
+      "../js/jquery.lettering.js",
+      "../js/jquery.fittext.js",
+      "../js/jquery.ajaxchimp.min.js",
+      "../js/swiper.min.js",
+      "../js/custom.js",
     ];
 
     scripts.forEach((src) => {
@@ -62,7 +62,91 @@ export default function App() {
               <div className="loader"></div>
             </div> */}
 
-            <Header />
+            {/* <Header /> */}
+            <header id="home">
+              <nav className="navbar navbar-inverse navbar-expand-lg header-nav fixed-top light-header">
+                <div className="container">
+                  <a className="navbar-brand" href="index.html"></a>
+                  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCodeply">
+                    <i className="icofont-navigation-menu"></i>
+                  </button>
+                  <div className="collapse navbar-collapse" id="navbarCodeply">
+                    <ul className="nav navbar-nav ml-auto">
+                      <li>
+                        <a className="nav-link" href="#home">
+                          Home
+                        </a>
+                      </li>
+                      <li>
+                        <a className="nav-link" href="#services">
+                          About
+                        </a>
+                      </li>
+                      <li>
+                        <a className="nav-link" href="#feature">
+                          Feature
+                        </a>
+                      </li>
+                      <li>
+                        <a className="nav-link" href="#testimonials">
+                          Testimonial
+                        </a>
+                      </li>
+                      <li>
+                        <a className="nav-link" href="#screenshots">
+                          Screenshot
+                        </a>
+                      </li>
+                      <li>
+                        <a className="nav-link" href="#pricing">
+                          Price
+                        </a>
+                      </li>
+                      <li>
+                        <a className="nav-link" href="#blog">
+                          Blog
+                        </a>
+                        <span className="sub-menu-toggle" role="navigation" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i className="icofont-rounded-down"></i>
+                        </span>
+                        <ul className="sub-menu">
+                          <li>
+                            <a href="blog-full.html">Blog Full</a>
+                          </li>
+                          <li>
+                            <a href="blog-2-col.html">Blog 2 col</a>
+                          </li>
+                          <li>
+                            <a href="blog-3-col.html">Blog 3 col</a>
+                          </li>
+                          <li>
+                            <a href="blog-full-left-sidebar.html">Blog left sidebar</a>
+                          </li>
+                          <li>
+                            <a href="blog-full-right-sidebar.html">Blog right sidebar</a>
+                          </li>
+                          <li>
+                            <a href="single-blog.html">Single blog</a>
+                          </li>
+                          <li>
+                            <a href="single-left-sidebar.html">Single left sidebar</a>
+                          </li>
+                          <li>
+                            <a href="single-right-sidebar.html">Single right sidebar</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <a className="nav-link" href="#contact">
+                          Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </header>
+
             <Hero />
             <About />
             <Preface />
@@ -72,7 +156,7 @@ export default function App() {
             <InformationScreenshot />
             <PricingList />
             <Feature1 />
-            {/* <Feature2 /> */}
+            <Feature2 />
             <LatestBlog />
             <FormContact />
             <Footer />
