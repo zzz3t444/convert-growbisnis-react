@@ -28,7 +28,6 @@ export default function PricingList() {
       document.body.appendChild(script);
     });
 
- 
     return () => {
       scripts.forEach((src) => {
         const script = document.querySelector(`script[src="${src}"]`);

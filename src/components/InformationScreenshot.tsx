@@ -21,7 +21,6 @@ export default function InformationScreenshot() {
       "js/custom.js",
     ];
 
-  
     scripts.forEach((src) => {
       const script = document.createElement("script");
       script.src = src;
@@ -29,7 +28,6 @@ export default function InformationScreenshot() {
       document.body.appendChild(script);
     });
 
-  
     return () => {
       scripts.forEach((src) => {
         const script = document.querySelector(`script[src="${src}"]`);
