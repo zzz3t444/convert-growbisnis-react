@@ -8,19 +8,19 @@ import "../css/gredients/purple.css";
 import "../css/typography/poppins-quciksland.css";
 
 // import Header from "./components/Header";
-import Hero from "./section/Hero";
-import About from "./section/About";
-import Preface from "./section/Preface";
-import StepHowWorks from "./section/StepHowWorks";
-import AppFeature from "./section/AppFeature";
-import DummyTestimonial from "./section/DummyTestimonial";
-import InformationScreenshot from "./section/InformationScreenshot";
-import PricingList from "./section/PricingList";
-import Feature1 from "./section/Feature1";
-import Feature2 from "./section/Feature2";
-import LatestBlog from "./section/LatestBlog";
-import FormContact from "./section/FormContact";
-import Footer from "./section/Footer";
+import Hero from "./index_section/Hero";
+import About from "./index_section/About";
+import Preface from "./index_section/Preface";
+import StepHowWorks from "./index_section/StepHowWorks";
+import AppFeature from "./index_section/AppFeature";
+import DummyTestimonial from "./index_section/DummyTestimonial";
+import InformationScreenshot from "./index_section/InformationScreenshot";
+import PricingList from "./index_section/PricingList";
+import Feature1 from "./index_section/Feature1";
+import Feature2 from "./index_section/Feature2";
+import LatestBlog from "./index_section/LatestBlog";
+import FormContact from "./index_section/FormContact";
+import Footer from "./index_section/Footer";
 
 export default function App() {
   useEffect(() => {
