@@ -8,19 +8,19 @@ import "../css/gredients/purple.css";
 import "../css/typography/poppins-quciksland.css";
 
 // import Header from "./components/Header";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Preface from "./components/Preface";
-import StepHowWorks from "./components/StepHowWorks";
-import AppFeature from "./components/AppFeature";
-import DummyTestimonial from "./components/DummyTestimonial";
-import InformationScreenshot from "./components/InformationScreenshot";
-import PricingList from "./components/PricingList";
-import Feature1 from "./components/Feature1";
-import Feature2 from "./components/Feature2";
-import LatestBlog from "./components/LatestBlog";
-import FormContact from "./components/FormContact";
-import Footer from "./components/Footer";
+import Hero from "./section/Hero";
+import About from "./section/About";
+import Preface from "./section/Preface";
+import StepHowWorks from "./section/StepHowWorks";
+import AppFeature from "./section/AppFeature";
+import DummyTestimonial from "./section/DummyTestimonial";
+import InformationScreenshot from "./section/InformationScreenshot";
+import PricingList from "./section/PricingList";
+import Feature1 from "./section/Feature1";
+import Feature2 from "./section/Feature2";
+import LatestBlog from "./section/LatestBlog";
+import FormContact from "./section/FormContact";
+import Footer from "./section/Footer";
 
 export default function App() {
   useEffect(() => {
