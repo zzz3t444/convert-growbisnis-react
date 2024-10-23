@@ -7,7 +7,50 @@ import "../../css/style.css";
 import "../../css/gredients/purple.css";
 import "../../css/typography/poppins-quciksland.css";
 
-export default function AppFeature() {
+const SectionTitle = ({ title }: { title: string }) => (
+  <div className="section-title text-center m-50px-b">
+    <h2>{title}</h2>
+  </div>
+);
+
+const SingleFeature = ({ iconClass, title, description }: { iconClass: string; title: string; description: string }) => (
+  <div className="col-sm-6">
+    <div className="single-feature">
+      <i className={iconClass}></i>
+      <h4>{title}</h4>
+      <p>{description}</p>
+    </div>
+  </div>
+);
+
+const FeatureList = () => {
+  const features = [
+    { iconClass: "icofont-drawing-tablet", title: "Easy Installation", description: "Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot" },
+    { iconClass: "icofont-responsive", title: "Responsive Design", description: "Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot" },
+    { iconClass: "icofont-ui-note", title: "Flexible Interface", description: "Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot" },
+    { iconClass: "icofont-file-avi-mp4", title: "High Resolution", description: "Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot" },
+    { iconClass: "icofont-code-alt", title: "Bug Free Code", description: "Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot" },
+    { iconClass: "icofont-cloud-refresh", title: "Cloud Storage", description: "Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot" },
+  ];
+
+  return (
+    <div className="row">
+      {features.map((feature, index) => (
+        <SingleFeature key={index} iconClass={feature.iconClass} title={feature.title} description={feature.description} />
+      ))}
+    </div>
+  );
+};
+
+const MockupImages = () => (
+  <div className="position-relative featured-mockup">
+    <div className="bordered-box"></div>
+    <img className="phone-1" src="img/iphone-1.png" alt="" />
+    <img className="phone-2" src="img/iphone-2.png" alt="" />
+  </div>
+);
+
+const AppFeature = () => {
   useEffect(() => {
     const scripts = [
       "js/jquery-3.2.1.min.js",
@@ -39,80 +82,25 @@ export default function AppFeature() {
   }, []);
 
   return (
-    <>
-      <section id="feature" className="p-80px-tb position-relative">
-        <div className="filled-circle"></div>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-8 offset-sm-2">
-              <div className="section-title text-center m-50px-b">
-                <h2>App Features</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row align-items-center">
-            <div className="col-lg-6 col-md-12 md-p-50px-b">
-              <div className="row">
-                <div className="col-sm-6">
-                  <div className="single-feature">
-                    <i className="icofont-drawing-tablet"></i>
-                    <h4>Easy Installation</h4>
-                    <p>Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot</p>
-                  </div>
-                </div>
-
-                <div className="col-sm-6">
-                  <div className="single-feature">
-                    <i className="icofont-responsive"></i>
-                    <h4>Responsive Design</h4>
-                    <p>Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot</p>
-                  </div>
-                </div>
-
-                <div className="col-sm-6">
-                  <div className="single-feature">
-                    <i className="icofont-ui-note"></i>
-                    <h4>Flexible Interface</h4>
-                    <p>Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot</p>
-                  </div>
-                </div>
-
-                <div className="col-sm-6">
-                  <div className="single-feature">
-                    <i className="icofont-file-avi-mp4"></i>
-                    <h4>High Resolution</h4>
-                    <p>Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot</p>
-                  </div>
-                </div>
-
-                <div className="col-sm-6">
-                  <div className="single-feature">
-                    <i className="icofont-code-alt"></i>
-                    <h4>Bug Free Code</h4>
-                    <p>Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot</p>
-                  </div>
-                </div>
-
-                <div className="col-sm-6">
-                  <div className="single-feature">
-                    <i className="icofont-cloud-refresh"></i>
-                    <h4>Cloud Storage</h4>
-                    <p>Way nor furnished sir procuring therefore but. Warmth far manner myself active are cannot</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-6 col-md-12">
-              <div className="position-relative featured-mockup">
-                <div className="bordered-box"></div>
-                <img className="phone-1" src="img/iphone-1.png" alt="" />
-                <img className="phone-2" src="img/iphone-2.png" alt="" />
-              </div>
-            </div>
+    <section id="feature" className="p-80px-tb position-relative">
+      <div className="filled-circle"></div>
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-8 offset-sm-2">
+            <SectionTitle title="App Features" />
           </div>
         </div>
-      </section>
-      ;
-    </>
+        <div className="row align-items-center">
+          <div className="col-lg-6 col-md-12 md-p-50px-b">
+            <FeatureList />
+          </div>
+          <div className="col-lg-6 col-md-12">
+            <MockupImages />
+          </div>
+        </div>
+      </div>
+    </section>
   );
-}
+};
+
+export default AppFeature;

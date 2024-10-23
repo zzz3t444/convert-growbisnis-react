@@ -7,7 +7,7 @@ import "../../css/style.css";
 import "../../css/gredients/purple.css";
 import "../../css/typography/poppins-quciksland.css";
 
-export default function InformationScreenshot() {
+const InformationScreenshot = () => {
   useEffect(() => {
     const scripts = [
       "js/jquery-3.2.1.min.js",
@@ -38,53 +38,58 @@ export default function InformationScreenshot() {
     };
   }, []);
 
+  const SectionTitle = ({ title }: { title: string }) => (
+    <div className="section-title text-center m-50px-b">
+      <h2>{title}</h2>
+    </div>
+  );
+
+  const ScreenshotSlide = ({ src }: { src: string }) => (
+    <div className="swiper-slide col-sm-4">
+      <img src={src} alt="" />
+    </div>
+  );
+
+  const ScreenshotSlider = () => {
+    const screenshots = ["img/ss1.png", "img/ss2.png", "img/ss3.png", "img/ss4.png", "img/ss5.png"];
+
+    return (
+      <div className="row swiper-container screenshot-swiper p-50px-b">
+        <div className="swiper-wrapper">
+          {screenshots.map((src, index) => (
+            <ScreenshotSlide key={index} src={src} />
+          ))}
+        </div>
+        <div className="swiper-pagination"></div>
+        <div className="swiper-button-next">
+          <i className="icofont-stylish-right"></i>
+        </div>
+        <div className="swiper-button-prev">
+          <i className="icofont-stylish-left"></i>
+        </div>
+      </div>
+    );
+  };
+
+  const CircleDecorations = () => {
+    const circles = Array.from({ length: 10 }, (_, index) => <div key={index} className={`circle x${index + 1}`}></div>);
+
+    return <>{circles}</>;
+  };
+
   return (
-    <>
-      <section id="screenshots" className="p-80px-tb position-relative">
-        <div className="circle x1"></div>
-        <div className="circle x2"></div>
-        <div className="circle x3"></div>
-        <div className="circle x4"></div>
-        <div className="circle x7"></div>
-        <div className="circle x8"></div>
-        <div className="circle x9"></div>
-        <div className="circle x10"></div>
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-8 offset-sm-2">
-              <div className="section-title text-center m-50px-b">
-                <h2>App Screenshots</h2>
-              </div>
-            </div>
-          </div>
-          <div className="row swiper-container screenshot-swiper p-50px-b">
-            <div className="swiper-wrapper">
-              <div className="swiper-slide col-sm-4">
-                <img src="img/ss1.png" alt="" />
-              </div>
-              <div className="swiper-slide col-sm-4">
-                <img src="img/ss2.png" alt="" />
-              </div>
-              <div className="swiper-slide col-sm-4">
-                <img src="img/ss3.png" alt="" />
-              </div>
-              <div className="swiper-slide col-sm-4">
-                <img src="img/ss4.png" alt="" />
-              </div>
-              <div className="swiper-slide col-sm-4">
-                <img src="img/ss5.png" alt="" />
-              </div>
-            </div>
-            <div className="swiper-pagination"></div>
-            <div className="swiper-button-next">
-              <i className="icofont-stylish-right"></i>
-            </div>
-            <div className="swiper-button-prev">
-              <i className="icofont-stylish-left"></i>
-            </div>
+    <section id="screenshots" className="p-80px-tb position-relative">
+      <CircleDecorations />
+      <div className="container">
+        <div className="row">
+          <div className="col-sm-8 offset-sm-2">
+            <SectionTitle title="App Screenshots" />
           </div>
         </div>
-      </section>
-    </>
+        <ScreenshotSlider />
+      </div>
+    </section>
   );
-}
+};
+
+export default InformationScreenshot;

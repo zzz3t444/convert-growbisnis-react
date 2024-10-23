@@ -1,6 +1,6 @@
 // LatestBlog.js
 import { useEffect } from "react";
-import BlogPost from "../components/BlogPost";
+import BlogPost from "../index_components/BlogPost";
 import "../../css/animate.min.css";
 import "../../css/icofont.min.css";
 import "../../css/bootstrap.min.css";

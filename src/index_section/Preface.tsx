@@ -9,7 +9,6 @@ import "../../css/typography/poppins-quciksland.css";
 
 export default function Preface() {
   useEffect(() => {
-   
     const scripts = [
       "js/jquery-3.2.1.min.js",
       "js/jquery-migrate-3.0.0.min.js",
@@ -22,7 +21,6 @@ export default function Preface() {
       "js/custom.js",
     ];
 
-
     scripts.forEach((src) => {
       const script = document.createElement("script");
       script.src = src;
@@ -30,7 +28,6 @@ export default function Preface() {
       document.body.appendChild(script);
     });
 
-  
     return () => {
       scripts.forEach((src) => {
         const script = document.querySelector(`script[src="${src}"]`);
